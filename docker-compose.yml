@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: 'sh /server/start.sh'
+    ports:
+        - "8000:8000"
+    expose:
+        - "8000"
+    volumes:
+        - ./backend:/server
+    tty: true
+   
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    command: 'sh /app/start.sh'
+    volumes:
+        - ./frontend:/app
+    ports: 
+        - "8080:8080"
+        - "3000:3000"
+    expose:
+       - "8080"
+       - "3000"
+    tty: true
+      
