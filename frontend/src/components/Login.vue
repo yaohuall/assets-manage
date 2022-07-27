@@ -6,7 +6,7 @@
                 label-width="200px"
                 class="demo-ruleForm"
                 status-icon
-                style="width: 25%"
+                style="width: 30%"
             >
 
                 <el-form-item label="Account :" prop="username" style="text-align: center">
@@ -21,6 +21,12 @@
                     >
                 <!-- <el-button @click="resetForm(ruleFormRef)">Reset</el-button> -->
                 </el-form-item>
+                <div class="signup">
+                    <p class="desc">
+                        Do not have an account?
+                        <router-link to="/sign-up"> SignUp</router-link>
+                    </p>
+                </div>
         </el-form>
     </div>
 </template>
@@ -155,5 +161,9 @@ const submitForm = async (formEl: FormInstance | undefined) => {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
+}
+.desc{
+    color:#00ff00;
+    margin-left: 110px
 }
 </style>

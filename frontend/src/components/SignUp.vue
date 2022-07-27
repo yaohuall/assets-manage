@@ -93,7 +93,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
                         message:"Add successfully!",
                         type:'success'
                     })
-                    router.push("/log-in")
+                    router.push("/login")
             })
             .catch(error => {
                         if (error.response) {

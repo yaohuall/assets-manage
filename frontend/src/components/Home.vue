@@ -93,7 +93,7 @@
                 <el-form-item label="Actual price" prop="actual_price">
                     <el-input style="width:50%" v-model="Data.assetsForm.actual_price" placeholder="please input"/>
                 </el-form-item>
-                <el-form-item label="Birth date" >
+                <el-form-item label="Date" >
                     <el-date-picker v-model="Data.assetsForm.date" type="date" 
                     placeholder="Pick a day" value-format="YYYY-MM-DD"/>
                 </el-form-item>
