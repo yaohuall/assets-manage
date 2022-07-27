@@ -7,7 +7,7 @@
                 class="demo-ruleForm"
                 status-icon
                 :rules="Data.rules"
-                style="width: 25%"
+                style="width: 35%"
             >
 
                 <el-form-item label="Account :" prop="username" style="text-align: center">

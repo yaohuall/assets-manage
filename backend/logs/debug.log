@@ -1,1 +1,73 @@
 [2022-07-22 08:45:31][INFO][autoreload.py:637:run_with_reloader]：Watching for file changes with StatReloader
+[2022-07-26 16:37:38][WARNING][log.py:224:log_response]：Unauthorized: /api/v1/assets/
+[2022-07-26 16:37:38][WARNING][basehttp.py:161:log_message]："GET /api/v1/assets/ HTTP/1.1" 401 58
+[2022-07-26 16:37:38][WARNING][log.py:224:log_response]：Not Found: /api/v1/rates/
+[2022-07-26 16:37:38][WARNING][log.py:224:log_response]：Not Found: /api/v1/rate-chart/
+[2022-07-26 16:37:38][WARNING][basehttp.py:161:log_message]："GET /api/v1/rates/ HTTP/1.1" 404 8859
+[2022-07-26 16:37:38][WARNING][basehttp.py:161:log_message]："GET /api/v1/rate-chart/ HTTP/1.1" 404 8874
+[2022-07-27 08:37:04][WARNING][log.py:224:log_response]：Unauthorized: /api/v1/assets/
+[2022-07-27 08:37:04][WARNING][basehttp.py:161:log_message]："GET /api/v1/assets/ HTTP/1.1" 401 58
+[2022-07-27 08:37:04][WARNING][log.py:224:log_response]：Not Found: /api/v1/rates/
+[2022-07-27 08:37:04][WARNING][log.py:224:log_response]：Not Found: /api/v1/rate-chart/
+[2022-07-27 08:37:04][WARNING][basehttp.py:161:log_message]："GET /api/v1/rates/ HTTP/1.1" 404 8859
+[2022-07-27 08:37:04][WARNING][basehttp.py:161:log_message]："GET /api/v1/rate-chart/ HTTP/1.1" 404 8874
+[2022-07-27 08:57:44][WARNING][log.py:224:log_response]：Unauthorized: /api/v1/assets/
+[2022-07-27 08:57:44][WARNING][log.py:224:log_response]：Not Found: /api/v1/rates/
+[2022-07-27 08:57:44][WARNING][basehttp.py:161:log_message]："GET /api/v1/assets/ HTTP/1.1" 401 58
+[2022-07-27 08:57:44][WARNING][basehttp.py:161:log_message]："GET /api/v1/rates/ HTTP/1.1" 404 8859
+[2022-07-27 08:57:44][WARNING][log.py:224:log_response]：Not Found: /api/v1/rate-chart/
+[2022-07-27 08:57:44][WARNING][basehttp.py:161:log_message]："GET /api/v1/rate-chart/ HTTP/1.1" 404 8874
+[2022-07-27 08:58:33][INFO][basehttp.py:161:log_message]："OPTIONS /api/v1/token/login/ HTTP/1.1" 200 0
+[2022-07-27 08:58:33][WARNING][log.py:224:log_response]：Unauthorized: /api/v1/users/me/
+[2022-07-27 08:58:33][WARNING][basehttp.py:161:log_message]："GET /api/v1/users/me/ HTTP/1.1" 401 58
+[2022-07-27 09:00:46][WARNING][log.py:224:log_response]：Unauthorized: /api/v1/assets/
+[2022-07-27 09:00:46][WARNING][basehttp.py:161:log_message]："GET /api/v1/assets/ HTTP/1.1" 401 58
+[2022-07-27 09:00:46][WARNING][log.py:224:log_response]：Not Found: /api/v1/rate-chart/
+[2022-07-27 09:00:46][WARNING][log.py:224:log_response]：Not Found: /api/v1/rates/
+[2022-07-27 09:00:46][WARNING][basehttp.py:161:log_message]："GET /api/v1/rate-chart/ HTTP/1.1" 404 8874
+[2022-07-27 09:00:46][WARNING][basehttp.py:161:log_message]："GET /api/v1/rates/ HTTP/1.1" 404 8859
+[2022-07-27 09:40:24][WARNING][log.py:224:log_response]：Unauthorized: /api/v1/assets/
+[2022-07-27 09:40:24][WARNING][basehttp.py:161:log_message]："GET /api/v1/assets/ HTTP/1.1" 401 58
+[2022-07-27 09:40:24][WARNING][log.py:224:log_response]：Not Found: /api/v1/rates/
+[2022-07-27 09:40:24][WARNING][basehttp.py:161:log_message]："GET /api/v1/rates/ HTTP/1.1" 404 8859
+[2022-07-27 09:40:24][WARNING][log.py:224:log_response]：Not Found: /api/v1/rate-chart/
+[2022-07-27 09:40:24][WARNING][basehttp.py:161:log_message]："GET /api/v1/rate-chart/ HTTP/1.1" 404 8874
+[2022-07-27 09:43:22][INFO][basehttp.py:161:log_message]："OPTIONS /api/v1/assets/ HTTP/1.1" 200 0
+[2022-07-27 09:43:22][INFO][basehttp.py:161:log_message]："OPTIONS /api/v1/rates/ HTTP/1.1" 200 0
+[2022-07-27 09:43:22][INFO][basehttp.py:161:log_message]："OPTIONS /api/v1/rate-chart/ HTTP/1.1" 200 0
+[2022-07-27 09:43:22][WARNING][log.py:224:log_response]：Not Found: /api/v1/rates/
+[2022-07-27 09:43:22][WARNING][log.py:224:log_response]：Not Found: /api/v1/rate-chart/
+[2022-07-27 09:43:22][WARNING][basehttp.py:161:log_message]："GET /api/v1/rates/ HTTP/1.1" 404 8859
+[2022-07-27 09:43:22][WARNING][basehttp.py:161:log_message]："GET /api/v1/rate-chart/ HTTP/1.1" 404 8874
+[2022-07-27 09:43:22][INFO][basehttp.py:161:log_message]："GET /api/v1/assets/ HTTP/1.1" 200 116
+[2022-07-27 09:44:05][WARNING][log.py:224:log_response]：Not Found: /api/v1/rates/
+[2022-07-27 09:44:05][WARNING][log.py:224:log_response]：Not Found: /api/v1/rate-chart/
+[2022-07-27 09:44:05][INFO][basehttp.py:161:log_message]："GET /api/v1/assets/ HTTP/1.1" 200 116
+[2022-07-27 09:44:05][WARNING][basehttp.py:161:log_message]："GET /api/v1/rates/ HTTP/1.1" 404 8859
+[2022-07-27 09:44:05][WARNING][basehttp.py:161:log_message]："GET /api/v1/rate-chart/ HTTP/1.1" 404 8874
+[2022-07-27 09:45:24][INFO][basehttp.py:161:log_message]："OPTIONS /api/v1/token/login/ HTTP/1.1" 200 0
+[2022-07-27 09:45:24][WARNING][log.py:224:log_response]：Unauthorized: /api/v1/users/me/
+[2022-07-27 09:45:24][WARNING][basehttp.py:161:log_message]："GET /api/v1/users/me/ HTTP/1.1" 401 58
+[2022-07-27 09:48:10][WARNING][log.py:224:log_response]：Not Found: /api/v1/rates/
+[2022-07-27 09:48:10][WARNING][basehttp.py:161:log_message]："GET /api/v1/rates/ HTTP/1.1" 404 8859
+[2022-07-27 09:48:10][WARNING][log.py:224:log_response]：Not Found: /api/v1/rate-chart/
+[2022-07-27 09:48:10][INFO][basehttp.py:161:log_message]："GET /api/v1/assets/ HTTP/1.1" 200 116
+[2022-07-27 09:48:10][WARNING][basehttp.py:161:log_message]："GET /api/v1/rate-chart/ HTTP/1.1" 404 8874
+[2022-07-27 09:48:25][WARNING][log.py:224:log_response]：Not Found: /api/v1/rates/
+[2022-07-27 09:48:25][WARNING][log.py:224:log_response]：Not Found: /api/v1/rate-chart/
+[2022-07-27 09:48:25][WARNING][basehttp.py:161:log_message]："GET /api/v1/rates/ HTTP/1.1" 404 8859
+[2022-07-27 09:48:25][INFO][basehttp.py:161:log_message]："GET /api/v1/assets/ HTTP/1.1" 200 116
+[2022-07-27 09:48:25][WARNING][basehttp.py:161:log_message]："GET /api/v1/rate-chart/ HTTP/1.1" 404 8874
+[2022-07-27 10:21:58][INFO][basehttp.py:161:log_message]："OPTIONS /api/v1/token/login/ HTTP/1.1" 200 0
+[2022-07-27 10:21:58][WARNING][log.py:224:log_response]：Unauthorized: /api/v1/users/me/
+[2022-07-27 10:21:58][WARNING][basehttp.py:161:log_message]："GET /api/v1/users/me/ HTTP/1.1" 401 58
+[2022-07-27 10:29:54][INFO][basehttp.py:161:log_message]："OPTIONS /api/v1/token/login/ HTTP/1.1" 200 0
+[2022-07-27 10:29:54][ERROR][exception.py:99:response_for_exception]：Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+[2022-07-27 10:29:54][WARNING][log.py:224:log_response]：Bad Request: /api/v1/users/me/
+[2022-07-27 10:29:54][WARNING][basehttp.py:161:log_message]："GET /api/v1/users/me/ HTTP/1.1" 400 72442
+[2022-07-27 10:30:43][INFO][basehttp.py:161:log_message]："OPTIONS /api/v1/token/login/ HTTP/1.1" 200 0
+[2022-07-27 10:30:43][ERROR][exception.py:99:response_for_exception]：Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+[2022-07-27 10:30:43][WARNING][log.py:224:log_response]：Bad Request: /api/v1/users/me/
+[2022-07-27 10:30:43][WARNING][basehttp.py:161:log_message]："GET /api/v1/users/me/ HTTP/1.1" 400 72442
+[2022-07-27 13:14:22][INFO][autoreload.py:251:trigger_reload]：D:\coding\Projects\assets\backend\backend\settings.py changed, reloading.
+[2022-07-27 13:14:24][INFO][autoreload.py:637:run_with_reloader]：Watching for file changes with StatReloader
