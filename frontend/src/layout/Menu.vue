@@ -15,7 +15,7 @@
           <template #title>
             <el-icon><setting /></el-icon><span class="cate">Financial Info</span>
           </template>
-            <el-menu-item index="/per-info/status">Status</el-menu-item>
+            <el-menu-item index="/stocks">Stocks</el-menu-item>
             <el-menu-item index="/per-info/manage">Manage</el-menu-item>
         </el-sub-menu>
 <!-- 

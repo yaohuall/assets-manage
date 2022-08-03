@@ -15,7 +15,7 @@
                         </el-select>
                             <el-button type="primary" :icon="DArrowRight" @click="changeTWD()"></el-button>
                             <el-input disabled v-model="Data.result" />
-                            <el-button class="clean-input" type="primary" @click="changeTWD()">Clean</el-button>
+                            <el-button class="clean-input" type="primary" @click="getChartData()">Clean</el-button>
                     </div>
                     <el-table :data="Data.currencies" style="margin-top:0px">
                         <el-table-column prop="CURRENCY" align="center" label="Currency"/>
@@ -65,8 +65,8 @@
             </el-col> 
 
             <el-col :span="8">
-                <el-card class="news" shadow="hover">
-                    <!-- <el-input v-model="query" placeholder="Search News" /> -->
+                <el-card shadow="hover">
+                    <div ref="piechartRef" class="pie-chart" style="width:120%; height:300%"></div>
                 </el-card>
             </el-col> 
         </el-row>
@@ -126,8 +126,11 @@ const store = useStore()
 let query = ref("")
 let numbers = ref("")
 let mycharts = ref()
+let mypiecharts = ref()
 // <HTMLElement>: 預告為html element
 let chartRef = ref<HTMLElement>()
+let piechartRef = ref<HTMLElement>()
+
 const ruleFormRef = ref('')
 const multipleSelection = ref([])
 let Data = reactive({
@@ -140,6 +143,10 @@ let Data = reactive({
     currencies: reactive([
     ]),
     assets: reactive([
+    ]),
+    assetsName: reactive([
+    ]),
+    assetsPrice: reactive([
     ]),
     rateOptions: reactive([
         {id:1, name:'TWD to USD'},
@@ -192,6 +199,7 @@ let getRates = () => {
 
 let getChartData = () => {
     API.rateChart.getData().then((res:any) => {
+        console.log("yo")
         console.log(res.data)
         // Data.currencies = res.data
     })
@@ -199,6 +207,7 @@ let getChartData = () => {
         console.log(error)
     })
 }
+
 let changeTWD = () => {
     let ratetype = Data.rate
     const currate = Data.currencies[Number(ratetype)-1].RATE
@@ -206,44 +215,90 @@ let changeTWD = () => {
 }
 
 onMounted(() => {
-// as HTMLElement避免報錯
-mycharts.value = echarts.init(chartRef.value as HTMLElement)
-mycharts.value.setOption({
+        // as HTMLElement避免報錯
+        getAssets()
+        console.log(Data.assetsPrice)
+        mycharts.value = echarts.init(chartRef.value as HTMLElement)
+        mycharts.value.setOption({
 
-        title: {
-            text: 'TWD to USD: One Year Exchange Rate',
-            textStyle: {
-                color: '#00ff00'
-            }
-        },
-        tooltip: {
-        },
-        xAxis: {
-            data: ['1', '2', '3', '4', '5', '6']
-        },
-        yAxis: {
-        },
-        series: [
-            {
-            name: 'ef',
-            type: 'line',
-            data: [5, 20, 36, 10, 10, 20],
-            itemStyle: {
-                        normal: {
-                                    color:"#00ff00"
+                title: {
+                    text: 'TWD to USD: One Year Exchange Rate',
+                    textStyle: {
+                        color: '#00ff00'
+                    }
+                },
+                tooltip: {
+                },
+                xAxis: {
+                    data: ['1', '2', '3', '4', '5', '6']
+                },
+                yAxis: {
+                },
+                series: [
+                    {
+                    name: 'ef',
+                    type: 'line',
+                    data: [5, 20, 36, 10, 10, 20],
+                    itemStyle: {
+                                normal: {
+                                            color:"#00ff00"
+                                        },
                                 },
-                        },
-            }
-        ]
-    })
-
+                    }
+                ]
+        })
     }
 )
 
 let getAssets = () =>{
     API.assets.getData().then((res:any) => {
-        console.log(res.data)
+        // console.log(res.data)
         Data.assets = res.data
+        let assetsPrice = []
+        let assetsName = []
+         for (let i of res.data){
+               assetsPrice.push({value:i.actual_price, name:i.asset_type})
+               assetsName.push(i.asset_type)
+        }
+        // console.log(Data.assetsName)
+        // console.log(Data.assetsPrice)
+        mypiecharts.value = echarts.init(piechartRef.value as HTMLElement)
+        mypiecharts.value.setOption(
+            {
+            title: {
+                text: 'Assets distribution',
+                // subtext: '纯属虚构',
+                // x: 'center',
+                textStyle: {
+                        color: '#00ff00'
+                    }
+          },
+          tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)",
+          },
+          legend: {
+            data: assetsName,
+            left:"center",                              
+            top:"bottom",                              
+            orient:"horizontal",     
+            textStyle: {
+                    color: '#00ff00'
+                }                   
+          },
+          series: [
+            {
+              name: 'Asset value',
+              type: 'pie',
+            //   radius: ['10%', '70%'],
+            //   center: ['10%', '10%'],
+              data: assetsPrice,
+              animationEasing: 'cubicInOut',
+              animationDuration: 2600,
+            }
+          ]
+            }
+        )
     })
     .catch((error:any) => {
         console.log(error)
@@ -256,8 +311,8 @@ let addAsset = () =>{
 let cancelAsset = () => {
     Data.dialogFormVisible = false;
     Data.assetsForm.name = ref('')
-    Data.assetsForm.purchased_price = ref('')
-    Data.assetsForm.actual_price = ref('')
+    Data.assetsForm.purchased_price = ref(null)
+    Data.assetsForm.actual_price = ref(null)
     Data.assetsForm.date = ref('')
     Data.assetsForm.asset_type = ref('')
     Data.assetsForm.memo = ref('')
@@ -480,6 +535,9 @@ getChartData()
 }
 :deep(.el-message-box__content){
     color:#00ff00
+}
+.pie-chart{
+    margin-top:20px,
 }
 </style>
 

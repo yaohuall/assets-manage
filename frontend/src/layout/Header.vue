@@ -26,8 +26,8 @@
     </el-container>
     <div>
 
-        <span v-if="store.state.isAuthenticated">
-            {{ userInfo }}
+        <span class="user-info" v-if="store.state.isAuthenticated">
+            Hi! {{ userInfo.username }}
         </span>
     </div>
     <!-- <el-dropdown>
@@ -147,5 +147,7 @@ watch(() => route.path, ()=>getBredCum())
     padding: 15px;
     margin: 0px;
 }
-
+.user-info{
+    color:#00ff00
+}
 </style>

@@ -6,6 +6,7 @@ let rateChart = new APIBase("rate-chart")
 let sign = new APIBase("users")
 let login = new APIBase("token/login")
 let account = new APIBase("users/me")
+let stocks = new APIBase("stocks")
 
 export default {
     rates,
@@ -13,5 +14,6 @@ export default {
     rateChart,
     sign,
     login,
-    account
+    account,
+    stocks
 }

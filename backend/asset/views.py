@@ -45,7 +45,6 @@ import json
 #         usd = currency_hist_df['收盘'].values
 #         series = pd.date_range(start=start_day, end=today, freq='D')
 #         period = series.strftime("%Y%m%d").to_list()
-
 #         return Response({'time':period, 'data':usd})
 
 class AssetsViewSet(ModelViewSet):

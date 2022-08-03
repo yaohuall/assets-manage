@@ -2,9 +2,19 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../src/components/Home.vue'
 import Login from '../src/components/Login.vue'
 import SignUp from '../src/components/SignUp.vue'
+import Stocks from '../src/views/Stocks.vue'
 import store from '../store'
 
 const routes : Array<RouteRecordRaw> = [
+
+    {
+        path: "/",
+        component: Home,
+        meta: {
+            title: 'Home',
+            requireLogin: true
+        },
+    },
     {
         path: "/home",
         component: Home,
@@ -25,6 +35,13 @@ const routes : Array<RouteRecordRaw> = [
         component: SignUp,
         meta: {
             title: 'SignUp',
+        },
+    },
+    {
+        path: "/stocks",
+        component: Stocks,
+        meta: {
+            title: 'Stocks',
         },
     },
 
@@ -56,10 +73,10 @@ const router = createRouter(
 router.beforeEach((to, from, next) => {
     if (to.matched.some(record => record.meta.requireLogin) && !store.state.isAuthenticated){
       next('/login')
-    }else{
-      next()
     }
-    if (to.path === '/') next('/home')
+    else if (to.path === '/') {
+        next('/home')
+    }
     else{
         next()
     }

@@ -6,7 +6,7 @@
                 label-width="200px"
                 class="demo-ruleForm"
                 status-icon
-                style="width: 30%"
+                style="width: 35%"
             >
 
                 <el-form-item label="Account :" prop="username" style="text-align: center">

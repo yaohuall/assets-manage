@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'djoser',
     'corsheaders',
-    'asset.apps.AssetConfig'
+    'asset.apps.AssetConfig',
+    'stocks'
 ]
 
 REST_FRAMEWORK = {
@@ -201,3 +202,5 @@ LOGGING = {
         },
     },
 }
+
+CELERY_BROKER_URL = 'redis://localhost:6379'
